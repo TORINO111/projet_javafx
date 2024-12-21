@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dette.boutique.controllers.DettesController">
+   <children>
+      <AnchorPane layoutY="53.0" prefHeight="346.0" prefWidth="600.0">
+         <children>
+            <Pagination fx:id="pagination" layoutY="9.0" maxPageIndicatorCount="5" prefHeight="338.0" prefWidth="600.0" style="-fx-background-color: brown;" />
+            <TableView fx:id="tab_dettes" layoutX="32.0" layoutY="61.0" prefHeight="224.0" prefWidth="536.0" style="-fx-background-color: white;">
+               <columns>
+                  <TableColumn fx:id="colonne_num_dette" prefWidth="78.40008544921875" text="Num Dette" />
+                  <TableColumn fx:id="colonne_montant" prefWidth="87.99993896484375" text="Montant" />
+                  <TableColumn fx:id="colonne_nom_client" prefWidth="112.79998779296875" text="Nom Client" />
+                  <TableColumn fx:id="colonne_prenom" prefWidth="144.800048828125" text="Prénom(s) Client" />
+                  <TableColumn fx:id="colonne_num_client" prefWidth="113.59991455078125" text="Numéro Client" />
+               </columns>
+            </TableView>
+            <ToolBar layoutX="25.0" layoutY="14.0" prefHeight="40.0" prefWidth="201.0" style="-fx-background-color: brown;">
+               <items>
+                  <ChoiceBox fx:id="champ_filtre" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: white;" />
+                  <Button fx:id="btn_valider_filtre" mnemonicParsing="false" style="-fx-background-color: white;" text="OK" />
+               </items>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

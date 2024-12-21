@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2577af;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dette.boutique.controllers.ListeClientsBoutiquierController">
+   <left>
+      <AnchorPane prefHeight="630.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="630.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="32.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="613.0" prefWidth="1228.0" style="-fx-background-color: white; -fx-border-color: #2577af;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="11.0" layoutY="29.0" prefHeight="590.0" prefWidth="1145.0">
+               <children>
+                  <TreeTableView fx:id="champ_treeTableView" layoutX="10.0" layoutY="59.0" prefHeight="500.0" prefWidth="1119.0">
+                     <columns>
+                        <TreeTableColumn fx:id="champ_numero" minWidth="0.0" prefWidth="96.53338623046875" text="Numéro" />
+                        <TreeTableColumn fx:id="champ_nom" prefWidth="181.6000213623047" text="Nom" />
+                        <TreeTableColumn fx:id="champ_prenom" minWidth="0.533355712890625" prefWidth="166.4000244140625" text="Prénom" />
+                        <TreeTableColumn fx:id="champ_telephone" minWidth="0.0" prefWidth="179.2000732421875" text="Téléphone" />
+                        <TreeTableColumn fx:id="champ_adresse" prefWidth="168.79998779296875" text="Adresse" />
+                        <TreeTableColumn fx:id="champ_Login" prefWidth="188.0" text="Nom d'utilisateur" />
+                        <TreeTableColumn fx:id="champ_dettesNonSoldees" prefWidth="138.39996337890625" text="Dettes non soldées" />
+                     </columns>
+                  </TreeTableView>
+                  <Button fx:id="btn_creerClient" layoutX="976.0" layoutY="7.0" mnemonicParsing="false" onAction="#FormCreerClient" prefHeight="41.0" prefWidth="153.0" style="-fx-background-color: #2577af; -fx-font-size: 19px;" text="Créer un client" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="champ_rechercherClient" layoutX="11.0" layoutY="20.0" prefHeight="26.0" prefWidth="227.0" promptText="Numéro Client" />
+                  <Button fx:id="button_filtreVoirTout" layoutX="379.0" layoutY="19.0" mnemonicParsing="false" onAction="#voirClientsAll" prefHeight="27.0" prefWidth="128.0" style="-fx-background-color: #2577af;" text="Voir tous les clients" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="nutton_rechercherClient" layoutX="253.0" layoutY="21.0" mnemonicParsing="false" onAction="#findClientByTelephone" text="Rechercher" />
+                  <Label fx:id="label_erreurRecherche" layoutX="11.0" layoutY="-10.0" prefHeight="23.0" prefWidth="278.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor_afficheDettes" disable="true" layoutY="2.0" opacity="0.0" prefHeight="598.0" prefWidth="1155.0">
+               <children>
+                  <TextArea fx:id="champ_afficheDettes" layoutX="13.0" layoutY="19.0" prefHeight="570.0" prefWidth="1131.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="button_fermerAfficheDettes" layoutX="1098.0" layoutY="18.0" mnemonicParsing="false" onAction="#fermerAnchor" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: red;" text="X" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="40.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="35.0" prefWidth="1280.0" style="-fx-background-color: white;">
+               <children>
+                  <Button fx:id="btn_deconnexion" layoutX="1087.0" layoutY="1.0" minWidth="8.0" mnemonicParsing="false" onAction="#Deconnexion" prefHeight="32.0" prefWidth="145.0" style="-fx-background-color: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Déconnexion" textFill="#ac1d1d" />
+                  <Line endX="8.4" endY="32.9" layoutX="403.0" layoutY="8.0" startX="8.4" startY="-8.17" stroke="#2577af" strokeWidth="2" />
+                  <Button fx:id="btn_listDemandesDettes" layoutX="185.0" layoutY="4.0" minWidth="63.0" mnemonicParsing="false" onAction="#ListeDemandesDette" prefHeight="0.0" prefWidth="222.0" style="-fx-background-color: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Lister demandes de dette" />
+                  <Button fx:id="btn_listClients" layoutX="50.0" layoutY="4.0" minWidth="63.0" mnemonicParsing="false" onAction="#ListeClients" prefHeight="10.0" prefWidth="122.0" style="-fx-background-color: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Lister clients" />
+                  <Line endX="8.4" endY="32.9" layoutX="171.0" layoutY="8.0" startX="8.4" startY="-8.17" stroke="#2577af" strokeWidth="2" />
+                  <Button fx:id="btn_listDettesArchiver" layoutX="414.0" layoutY="4.0" minWidth="63.0" mnemonicParsing="false" onAction="#ListeDettes" prefHeight="0.0" prefWidth="150.0" style="-fx-background-color: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Lister dettes" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="72.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btn_Roles1" layoutX="595.0" layoutY="15.0" minWidth="46.0" mnemonicParsing="false" onAction="#pageRoles" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: white;" text="Articles">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_clients" layoutX="59.0" layoutY="18.0" minWidth="54.0" mnemonicParsing="false" onAction="#pageClients" prefHeight="40.0" prefWidth="86.0" style="-fx-background-color: white;" text="Clients">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_dettes" layoutX="349.0" layoutY="15.0" minWidth="53.0" mnemonicParsing="false" onAction="#pageDettes" prefHeight="40.0" prefWidth="87.0" style="-fx-background-color: white;" text="Dettes">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_users" layoutX="182.0" layoutY="17.0" minWidth="63.0" mnemonicParsing="false" onAction="#pageUsers" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: white;" text="Utilisateurs">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_Roles" layoutX="482.0" layoutY="15.0" minWidth="46.0" mnemonicParsing="false" onAction="#pageRoles" prefHeight="40.0" prefWidth="74.0" style="-fx-background-color: white;" text="Rôles">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_deconnexion" layoutX="1105.0" layoutY="14.0" minWidth="8.0" mnemonicParsing="false" onAction="#deconnexion" prefHeight="43.0" prefWidth="138.0" style="-fx-background-color: white;" text="Déconnexion" textFill="#ac1d1d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+      </Button>
+      <Line endX="8.399978637695312" endY="39.99290084838867" layoutX="162.0" layoutY="23.0" startX="8.399978637695312" startY="-17.0" stroke="#2577af" />
+      <Line endX="8.399978637695312" endY="39.99290084838867" layoutX="318.0" layoutY="23.0" startX="8.399978637695312" startY="-17.0" stroke="#2577af" />
+      <Line endX="8.399978637695312" endY="39.99290084838867" layoutX="452.0" layoutY="23.0" startX="8.399978637695312" startY="-17.0" stroke="#2577af" />
+      <Line endX="8.399978637695312" endY="39.99290084838867" layoutX="574.0" layoutY="23.0" startX="8.399978637695312" startY="-17.0" stroke="#2577af" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2577af;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dette.boutique.controllers.ListeArticlesAdminController">
+   <left>
+      <AnchorPane prefHeight="630.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="630.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="32.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="613.0" prefWidth="1228.0" style="-fx-background-color: white; -fx-border-color: #2577af;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="11.0" layoutY="29.0" prefHeight="590.0" prefWidth="1145.0">
+               <children>
+                  <TreeTableView fx:id="champ_treeTableView" layoutX="86.0" layoutY="59.0" prefHeight="500.0" prefWidth="960.0">
+                     <columns>
+                        <TreeTableColumn fx:id="champ_numero" minWidth="0.0" prefWidth="96.53338623046875" text="Numéro" />
+                        <TreeTableColumn fx:id="champ_libelleArticle" prefWidth="230.13333129882812" text="Article" />
+                        <TreeTableColumn fx:id="champ_prixUnitaire" minWidth="0.533355712890625" prefWidth="150.6666259765625" text="Prix Unitaire" />
+                        <TreeTableColumn fx:id="champ_enStock" minWidth="0.0" prefWidth="160.53338623046875" text="En Stock" />
+                        <TreeTableColumn fx:id="champ_date" prefWidth="151.466552734375" text="Date Création" />
+                        <TreeTableColumn fx:id="champ_majStockArticle" prefWidth="167.99993896484375" text="MAJ Stock" />
+                     </columns>
+                  </TreeTableView>
+                  <Button fx:id="btn_creerArticle" layoutX="889.0" layoutY="7.0" mnemonicParsing="false" onAction="#FormCreerArticle" prefHeight="41.0" prefWidth="153.0" style="-fx-background-color: #2577af; -fx-font-size: 19px;" text="Créer un article" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font></Button>
+                  <AnchorPane fx:id="anchor_majStock" disable="true" layoutX="280.0" layoutY="90.0" opacity="0.0" prefHeight="457.0" prefWidth="528.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="471.0" layoutX="-3.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="530.0" />
+                        <TextField fx:id="label_majStock" layoutX="89.0" layoutY="115.0" prefHeight="54.0" prefWidth="375.0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </TextField>
+                        <Spinner fx:id="spinner_majStock" editable="true" layoutX="89.0" layoutY="241.0" prefHeight="58.0" prefWidth="371.0" />
+                        <Label layoutX="107.0" layoutY="27.0" text="NOUVELLE QUANTITÉ EN STOCK" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button_validerMajStock" layoutX="183.0" layoutY="379.0" mnemonicParsing="false" onAction="#validerMajStock" prefHeight="38.0" prefWidth="173.0" text="Valider">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="label_erreur" layoutX="88.0" layoutY="24.0" prefHeight="35.0" prefWidth="378.0" />
+                     </children>
+                  </AnchorPane>
+                  <ComboBox fx:id="combo_filtre" layoutX="86.0" layoutY="12.0" onAction="#filtreCase" prefHeight="37.0" prefWidth="258.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="40.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="35.0" prefWidth="1280.0" style="-fx-background-color: white;">
+               <children>
+                  <Button fx:id="btn_deconnexion1" layoutX="1087.0" layoutY="1.0" minWidth="8.0" mnemonicParsing="false" onAction="#Deconnexion" prefHeight="32.0" prefWidth="145.0" style="-fx-background-color: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Déconnexion" textFill="#ac1d1d" />
+                  <Line endX="8.4" endY="32.9" layoutX="335.0" layoutY="8.0" startX="8.4" startY="-8.17" stroke="#2577af" strokeWidth="2" />
+                  <Button fx:id="btn_listUsers" layoutX="185.0" layoutY="4.0" minWidth="63.0" mnemonicParsing="false" onAction="#ListeUsers" prefHeight="20.0" prefWidth="154.0" style="-fx-background-color: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Lister utilisateurs" />
+                  <Button fx:id="btn_listArticles" layoutX="50.0" layoutY="4.0" minWidth="63.0" mnemonicParsing="false" onAction="#ListeArticles" prefHeight="17.0" prefWidth="122.0" style="-fx-background-color: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Lister articles" />
+                  <Line endX="8.4" endY="32.9" layoutX="171.0" layoutY="8.0" startX="8.4" startY="-8.17" stroke="#2577af" strokeWidth="2" />
+                  <Button fx:id="btn_listDettesArchiver" layoutX="346.0" layoutY="4.0" minWidth="63.0" mnemonicParsing="false" onAction="#ListeDettes" prefHeight="22.0" prefWidth="150.0" style="-fx-background-color: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Archivage Dettes" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

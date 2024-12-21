@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: c1a134; -fx-background-color: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dette.boutique.controllers.BoutiquierController">
+   <children>
+      <Pagination id="pagination" layoutX="8.0" layoutY="10.0" maxPageIndicatorCount="5" prefHeight="381.0" prefWidth="584.0" style="-fx-background-color: white;" />
+      <TableView id="table_clients" layoutX="49.0" layoutY="97.0" prefHeight="217.0" prefWidth="501.0" style="-fx-background-color: #0f54a2; -fx-border-color: black; -fx-border-radius: 1;">
+         <columns>
+            <TableColumn id="col_surname" prefWidth="128.0" text="Surname" />
+            <TableColumn id="col_tel" prefWidth="132.0" text="Téléphone" />
+            <TableColumn minWidth="6.0" prefWidth="122.0" text="Adresse" />
+            <TableColumn minWidth="0.0" prefWidth="115.0" text="Montant dû" />
+         </columns>
+      </TableView>
+      <ToolBar id="btn_retour" layoutX="34.0" layoutY="19.0" prefHeight="45.0" prefWidth="101.0" style="-fx-background-color: white;">
+         <items>
+            <Button mnemonicParsing="false" style="-fx-background-color: grey;" text="Retour" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+      <ChoiceBox layoutX="337.0" layoutY="60.0" prefWidth="150.0" />
+      <Button layoutX="502.0" layoutY="60.0" mnemonicParsing="false" style="-fx-background-color: grey;" text="OK" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
